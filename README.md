@@ -1,31 +1,35 @@
-# 🚀 AI Dev Tasks 🤖
+# 🚀 AI Udviklingsopgaver 🤖
 
-Welcome to **AI Dev Tasks**! This repository provides a collection of markdown files designed to supercharge your feature development workflow with AI-powered IDEs and CLIs. Originally built for [Cursor](https://cursor.sh/), these tools work with any AI coding assistant including Claude Code, Windsurf, and others. By leveraging these structured prompts, you can systematically approach building features, from ideation to implementation, with built-in checkpoints for verification.
+Velkommen til **AI Udviklingsopgaver**! Dette repository indeholder en samling af markdown-filer designet til at styrke din feature-udviklingsproces med AI-drevne IDE'er og kommandolinjeværktøjer. Oprindeligt bygget til Cursor [Cursor](https://cursor.sh/), fungerer disse værktøjer med enhver AI-kodeassistent, inklusive Claude Code, Windsurf og andre. Ved at bruge disse strukturerede prompts kan du systematisk arbejde dig gennem hele udviklingsforløbet – fra idé til implementering – med indbyggede kontrolpunkter til validering.
 
-Stop wrestling with monolithic AI requests and start guiding your AI collaborator step-by-step!
+Stop med at kæmpe med store, uoverskuelige AI-forespørgsler – begynd i stedet at guide din AI-samarbejdspartner trin-for-trin!
 
-## ✨ The Core Idea
+## ✨ The Core Idea / Den Grundlæggende Idé
 
-Building complex features with AI can sometimes feel like a black box. This workflow aims to bring structure, clarity, and control to the process by:
+At bygge komplekse funktioner med AI kan nogle gange føles som en black box. Dette workflow har til formål at bringe struktur, klarhed og kontrol ind i processen ved at:
 
-1. **Defining Scope:** Clearly outlining what needs to be built with a Product Requirement Document (PRD).
-2. **Detailed Planning:** Breaking down the PRD into a granular, actionable task list.
-3. **Iterative Implementation:** Guiding the AI to tackle one task at a time, allowing you to review and approve each change.
+1. **Defining Scope / Definere Omfang**: Tydeligt beskrive, hvad der skal bygges, via et **Product Requirement Document** (PRD).
 
-This structured approach helps ensure the AI stays on track, makes it easier to debug issues, and gives you confidence in the generated code.
+2. **Detailed Planning/ Detaljeret Planlægning**: Nedbryde PRD’en til en detaljeret, handlingsorienteret opgaveliste.
+
+3. **Iterative Implementation/ Iterativ Implementering**: Guide AI’en til at løse én opgave ad gangen, så du kan gennemgå og godkende hver ændring.
+
+Denne strukturerede tilgang hjælper med at holde AI’en på sporet, gør det nemmere at fejlfinde og skaber tillid til den genererede kode.
+
 
 ## Workflow: From Idea to Implemented Feature 💡➡️💻
 
-Here's the step-by-step process using the `.md` files in this repository:
+Her er trin-for-trin-processen ved brug af .md-filerne i dette repository:
 
 ### 1️⃣ Create a Product Requirement Document (PRD)
 
-First, lay out the blueprint for your feature. A PRD clarifies what you're building, for whom, and why.
+Start med at lægge grundplanen for din funktion. Et PRD tydeliggør, hvad du bygger, for hvem og hvorfor.
 
-You can create a lightweight PRD directly within your AI tool of choice:
+Du kan oprette et letvægts-PRD direkte i dit foretrukne AI-værktøj:
 
-1. Ensure you have the `create-prd.md` file from this repository accessible.
-2. In your AI tool, initiate PRD creation:
+1. Sørg for, at du har adgang til create-prd.md-filen fra dette repository.
+
+2. I dit AI-værktøj, start PRD-oprettelsen:
 
     ```text
     Use @create-prd.md
@@ -38,148 +42,158 @@ You can create a lightweight PRD directly within your AI tool of choice:
 
 ### 2️⃣ Generate Your Task List from the PRD
 
-With your PRD drafted (e.g., `MyFeature-PRD.md`), the next step is to generate a detailed, step-by-step implementation plan for your AI Developer.
+Når dit PRD er færdigt (f.eks. MitFeature-PRD.md), er næste skridt at lave en detaljeret, trinvis implementeringsplan til din AI-udvikler.
 
-1. Ensure you have `generate-tasks.md` accessible.
-2. In your AI tool, use the PRD to create tasks:
+1. Sørg for, at du har generate-tasks.md tilgængelig.
+
+2. Brug PRD'et i dit AI-værktøj til at generere opgaver:
 
     ```text
     Now take @MyFeature-PRD.md and create tasks using @generate-tasks.md
     ```
-    *(Note: Replace `@MyFeature-PRD.md` with the actual filename of the PRD you generated in step 1.)*
+    *(Bemærk: Udskift @MitFeature-PRD.md med det faktiske filnavn på det PRD, du lavede i trin 1.)*
 
     ![Example of generating tasks from PRD](https://pbs.twimg.com/media/Go6FITbWkAA-RCT?format=jpg&name=medium)
 
 ### 3️⃣ Examine Your Task List
 
-You'll now have a well-structured task list, often with tasks and sub-tasks, ready for the AI to start working on. This provides a clear roadmap for implementation.
+Nu har du en velstruktureret opgaveliste, ofte med underopgaver, klar til AI’en. Det giver en tydelig køreplan for implementeringen.
 
 ![Example of a generated task list](https://pbs.twimg.com/media/Go6GNuOWsAEcSDm?format=jpg&name=medium)
 
 ### 4️⃣ Instruct the AI to Work Through Tasks (and Mark Completion)
 
-To ensure methodical progress and allow for verification, we'll use `process-task-list.md`. This command instructs the AI to focus on one task at a time and wait for your go-ahead before moving to the next.
+For at sikre metodisk fremgang og give mulighed for validering, bruger vi process-task-list.md. Denne fil instruerer AI’en i at fokusere på én opgave ad gangen og vente på din godkendelse, før den går videre.
 
-1. Create or ensure you have the `process-task-list.md` file accessible.
-2. In your AI tool, tell the AI to start with the first task (e.g., `1.1`):
+1. Sørg for, at process-task-list.md er tilgængelig.
+
+2. I dit AI-værktøj, bed AI’en starte med første opgave (f.eks. 1.1):
 
     ```text
     Please start on task 1.1 and use @process-task-list.md
     ```
-    *(Important: You only need to reference `@process-task-list.md` for the *first* task. The instructions within it guide the AI for subsequent tasks.)*
+    *(Vigtigt: Du skal kun referere til @process-task-list.md for den første opgave. Instruktionerne i filen guider AI’en videre)*
 
-    The AI will attempt the task and then prompt you to review.
+    AI’en forsøger opgaven og beder dig derefter om at gennemgå resultatet.
 
     ![Example of starting on a task with process-task-list.md](https://pbs.twimg.com/media/Go6I41KWcAAAlHc?format=jpg&name=medium)
 
 ### 5️⃣ Review, Approve, and Progress ✅
 
-As the AI completes each task, you review the changes.
+Når AI’en fuldfører en opgave, gennemgår du ændringerne.
 
-* If the changes are good, simply reply with "yes" (or a similar affirmative) to instruct the AI to mark the task complete and move to the next one.
-* If changes are needed, provide feedback to the AI to correct the current task before moving on.
+* Hvis ændringerne er tilfredsstillende, svar blot "yes" (eller en lignende bekræftelse) for at markere opgaven som fuldført og gå videre til næste.
 
-You'll see a satisfying list of completed items grow, providing a clear visual of your feature coming to life!
+* Hvis der er behov for rettelser, giver du feedback og beder AI’en rette opgaven, før der fortsættes.
+
+Du vil se en tilfredsstillende liste over fuldførte punkter vokse, som giver et visuelt overblik over din funktions fremdrift!
 
 ![Example of a progressing task list with completed items](https://pbs.twimg.com/media/Go6KrXZWkAA_UuX?format=jpg&name=medium)
 
-While it's not always perfect, this method has proven to be a very reliable way to build out larger features with AI assistance.
+Selvom det ikke altid er perfekt, er denne metode en pålidelig måde at bygge større funktioner med AI-hjælp.
 
-### Video Demonstration 🎥
+### 6️⃣ Video Demonstration 🎥
 
-If you'd like to see this in action, I demonstrated it on [Claire Vo's "How I AI" podcast](https://www.youtube.com/watch?v=fD4ktSkNCw4).
+Hvis du vil se dette i aktion, demonstrerede jeg det på [Claire Vo's "How I AI" podcast](https://www.youtube.com/watch?v=fD4ktSkNCw4).
 
 [![Demonstration of AI Dev Tasks on How I AI Podcast](https://img.youtube.com/vi/fD4ktSkNCw4/maxresdefault.jpg)](https://www.youtube.com/watch?v=fD4ktSkNCw4).
 
 ## 🗂️ Files in this Repository
 
-* **`create-prd.md`**: Guides the AI in generating a Product Requirement Document for your feature.
-* **`generate-tasks.md`**: Takes a PRD markdown file as input and helps the AI break it down into a detailed, step-by-step implementation task list.
-* **`process-task-list.md`**: Instructs the AI on how to process the generated task list, tackling one task at a time and waiting for your approval before proceeding. (This file also contains logic for the AI to mark tasks as complete).
+* **`create-prd.md`**: Vejleder AI’en i at generere et Produktkravdokument (PRD) til din funktion.
+* **`generate-tasks.md`**: Tager et PRD-markdown-dokument som input og hjælper AI’en med at nedbryde det i en detaljeret, trinvis implementeringsplan.
+* **`process-task-list.md`**: Instruerer AI’en i at bearbejde den genererede opgaveliste én opgave ad gangen og vente på din godkendelse, før den går videre. (Filen indeholder også logik til at markere opgaver som fuldførte).
+
 
 ## 🌟 Benefits
 
-* **Structured Development:** Enforces a clear process from idea to code.
-* **Step-by-Step Verification:** Allows you to review and approve AI-generated code at each small step, ensuring quality and control.
-* **Manages Complexity:** Breaks down large features into smaller, digestible tasks for the AI, reducing the chance of it getting lost or generating overly complex, incorrect code.
-* **Improved Reliability:** Offers a more dependable approach to leveraging AI for significant development work compared to single, large prompts.
-* **Clear Progress Tracking:** Provides a visual representation of completed tasks, making it easy to see how much has been done and what's next.
+* **Structured Development:** Sikrer en klar proces fra idé til kode.
+* **Step-by-Step Verification:** Giver dig mulighed for at gennemgå og godkende AI-genereret kode trin for trin – for bedre kvalitet og kontrol.
+* **Manages Complexity:** Bryder store funktioner op i små, overskuelige opgaver, så AI’en ikke farer vild eller genererer for kompleks eller forkert kode.
+* **Improved Reliability:** En mere robust tilgang til at udnytte AI til større udviklingsopgaver, i stedet for ét stort prompt.
+* **Clear Progress Tracking:** Visuel repræsentation af gennemførte opgaver gør det nemt at se, hvor langt du er, og hvad der mangler.
 
 ## 🛠️ How to Use
 
-1. **Clone or Download:** Get these `.md` files into your project or a central location where your AI tool can access them.
-   ```bash
+1. **Clone or Download:** Hent disse .md-filer ind i dit projekt eller et centralt sted, hvor dit AI-værktøj kan tilgå dem.
+
    git clone https://github.com/snarktank/ai-dev-tasks.git
    ```
-2. **Follow the Workflow:** Systematically use the `.md` files in your AI assistant as described in the workflow above.
-3. **Adapt and Iterate:**
-    * Feel free to modify the prompts within the `.md` files to better suit your specific needs or coding style.
-    * If the AI struggles with a task, try rephrasing your initial feature description or breaking down tasks even further.
+3. **Follow the Workflow:** Brug .md-filerne systematisk sammen med dit AI-værktøj, som beskrevet i workflowet ovenfor.
+4. **Adapt and Iterate:**
+     * Du er velkommen til at ændre promptene i .md-filerne, så de bedre passer til dine behov eller din kodestil.
+     * Hvis AI’en har problemer med en opgave, så prøv at omformulere funktionsbeskrivelsen eller nedbryd opgaverne yderligere.
 
 ## Tool-Specific Instructions
 
 ### Cursor
 
-Cursor users can follow the workflow described above, using the `.md` files directly in the Agent chat:
+Cursor-brugere kan følge det beskrevne workflow ved at bruge .md-filerne direkte i Agent-chatten:
 
-1. Ensure you have the files from this repository accessible
-2. In Cursor's Agent chat, reference files with `@` (e.g., `@create-prd.md`)
-3. Follow the 5-step workflow as outlined above
-4. **MAX Mode for PRDs:** Using MAX mode in Cursor for PRD creation can yield more thorough results if your budget supports it
+1. Sørg for, at du har adgang til filerne fra dette repository
+2. I Cursor's Agent-chat, henvis til filer med @ (f.eks. @create-prd.md)
+3. Følg det 5-trins workflow som beskrevet ovenfor
+4. **MAX Mode til PRD’er**: Brug af MAX mode i Cursor ved PRD-oprettelse kan give mere grundige resultater, hvis dit budget tillader det
+
 
 ### Claude Code
 
-To use these tools with Claude Code:
+Sådan bruger du værktøjerne med Claude Code:
 
-1. **Copy files to your repo**: Copy the three `.md` files to a subdirectory in your project (e.g., `/ai-dev-tasks`)
+1. **Copy files to your repo**: Kopiér de tre .md-filer til en undermappe i dit projekt (f.eks. /ai-dev-tasks)
 
-2. **Reference in CLAUDE.md**: Add these lines to your project's `./CLAUDE.md` file:
+2. **Reference in CLAUDE.md**: Tilføj disse linjer til din projekts ./CLAUDE.md-fil:
    ```
-   # AI Dev Tasks
-   Use these files when I request structured feature development using PRDs:
-   /ai-dev-tasks/create-prd.md
-   /ai-dev-tasks/generate-tasks.md
-   /ai-dev-tasks/process-task-list.md
+# AI Dev Tasks
+Brug disse filer, når jeg beder om struktureret feature-udvikling med PRD’er:
+/ai-dev-tasks/create-prd.md
+/ai-dev-tasks/generate-tasks.md
+/ai-dev-tasks/process-task-list.md
+
    ```
 
-3. **Create custom commands** (optional): For easier access, create these files in `.claude/commands/`:
-   - `.claude/commands/create-prd.md` with content:
+3. **Create custom commands** (optional): For nemmere adgang, opret disse filer i .claude/commands/:
+   - `.claude/commands/create-prd.md` med følgende indhold:
      ```
-     Please use the structured workflow in /ai-dev-tasks/create-prd.md to help me create a PRD for a new feature.
+     Brug venligst den strukturerede workflow i /ai-dev-tasks/create-prd.md til at hjælpe mig med at oprette et PRD for en ny funktion.
      ```
-   - `.claude/commands/generate-tasks.md` with content:
+   - `.claude/commands/generate-tasks.md` med følgende indhold:
      ```
-     Please generate tasks from the PRD using /ai-dev-tasks/generate-tasks.md
-     If not explicitly told which PRD to use, generate a list of PRDs and ask the user to select one under `/tasks` or create a new one using `create-prd.md`:
-     - assume it's stored under `/tasks` and has a filename starting with `[n]-prd-` (e.g., `0001-prd-[name].md`)
-     - it should not already have a corresponding task list in `/tasks` (e.g., `tasks-0001-prd-[name].md`)
-     - **always** ask the user to confirm the PRD file name before proceeding
-     Make sure to provide options in number lists so I can respond easily (if multiple options).
+     Generér venligst opgaver ud fra PRD’et ved at bruge /ai-dev-tasks/generate-tasks.md  
+Hvis der ikke er angivet et specifikt PRD, så generér en liste over tilgængelige PRD’er og bed brugeren vælge ét under `/tasks`, eller opret et nyt via `create-prd.md`:
+
+- antag at PRD’er er gemt under `/tasks` og filnavnet starter med `[n]-prd-` (fx `0001-prd-[navn].md`)
+- sørg for at filen ikke allerede har en tilsvarende opgaveliste i `/tasks` (fx `tasks-0001-prd-[navn].md`)
+- **bed altid** brugeren bekræfte PRD-filnavnet før du fortsætter
+
+Giv gerne valgmuligheder i nummererede lister, så jeg nemt kan svare.
+
      ```
-   - `.claude/commands/process-task-list.md` with content:
+   - `.claude/commands/process-task-list.md` med følgende indhold:
      ```
-     Please process the task list using /ai-dev-tasks/process-task-list.md
+     Behandl venligst opgavelisten ved at bruge /ai-dev-tasks/process-task-list.md
      ```
 
-   Make sure to restart Claude Code after adding these files (`/exit`).
-   Then use commands like `/create-prd` to quickly start the workflow.
-   Note: This setup can also be adopted for a global level across all your projects, please refer to the Claude Code documentation [here](https://docs.anthropic.com/en/docs/claude-code/memory) and [here](https://docs.anthropic.com/en/docs/claude-code/common-workflows#create-personal-slash-commands).
+   🔁 Sørg for at genstarte Claude Code efter at have tilføjet disse filer (/exit).
+   Brug derefter kommandoer som /create-prd for hurtigt at starte workflowet.
+  Bemærk: Denne opsætning kan også bruges globalt på tværs af alle dine projekter – se Claude Code-dokumentationen her
+ og her.(https://docs.anthropic.com/en/docs/claude-code/memory) and [here](https://docs.anthropic.com/en/docs/claude-code/common-workflows#create-personal-slash-commands).
 
 ### Other Tools
 
-For other AI-powered IDEs or CLIs:
+For andre AI-drevne IDE’er eller CLI-værktøjer:
 
-1. Copy the `.md` files to your project
-2. Reference them according to your tool's documentation
-3. Follow the same workflow principles
+1. Kopiér .md-filerne til dit projekt
+2. Referér til dem ifølge dit værktøjs dokumentation
+3. Følg de samme workflow-principper
 
 ## 💡 Tips for Success
 
-* **Be Specific:** The more context and clear instructions you provide (both in your initial feature description and any clarifications), the better the AI's output will be.
-* **Use a Capable Model:** The free version of Cursor currently uses less capable AI models that often struggle to follow the structured instructions in this workflow. For best results, consider upgrading to the Pro plan to ensure consistent, accurate task execution.
-* **MAX Mode for PRDs:** As mentioned, using MAX mode in Cursor for PRD creation (`create-prd.mdc`) can yield more thorough and higher-quality results if your budget supports it.
-* **Correct File Tagging:** Always ensure you're accurately tagging the PRD filename (e.g., `@MyFeature-PRD.md`) when generating tasks.
-* **Patience and Iteration:** AI is a powerful tool, but it's not magic. Be prepared to guide, correct, and iterate. This workflow is designed to make that iteration process smoother.
+* **Be Specific:** Jo mere kontekst og klare instruktioner du giver (både i den oprindelige funktionsbeskrivelse og eventuelle afklaringer), desto bedre bliver AI’ens output.
+* **Use a Capable Model:** Den gratis version af Cursor benytter i øjeblikket mindre kapable AI-modeller, som ofte har svært ved at følge de strukturerede instruktioner i dette workflow. For de bedste resultater, overvej at opgradere til Pro-planen for at sikre konsistent og præcis opgaveudførelse.
+* **MAX Mode for PRDs:** Som nævnt tidligere, kan brugen af MAX mode i Cursor til PRD-oprettelse (create-prd.mdc) give mere grundige og højere kvalitetsresultater, hvis dit budget tillader det.
+* **Correct File Tagging:** Sørg altid for at tagge PRD-filen korrekt (f.eks. @MitFeature-PRD.md) når du genererer opgaver.
+* **Patience and Iteration:** AI er et kraftfuldt værktøj, men ikke magi. Vær forberedt på at vejlede, rette og iterere. Dette workflow er designet til at gøre iterationsprocessen nemmere.
 
 ## 🤝 Contributing
 
