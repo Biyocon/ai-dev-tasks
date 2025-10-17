@@ -2,46 +2,54 @@
 
 ## Goal
 
-To guide an AI assistant in creating a detailed Product Requirements Document (PRD) in Markdown format, based on an initial user prompt. The PRD should be clear, actionable, and suitable for a junior developer to understand and implement the feature.
+At guide en AI-assistent i at oprette et detaljeret Produktkravdokument (PRD) i Markdown-format, baseret på en indledende prompt fra brugeren. PRD’et skal være klart, handlingsorienteret og egnet til, at en juniorudvikler kan forstå og implementere funktionen.
 
 ## Process
 
-1.  **Receive Initial Prompt:** The user provides a brief description or request for a new feature or functionality.
-2.  **Ask Clarifying Questions:** Before writing the PRD, the AI *must* ask clarifying questions to gather sufficient detail. The goal is to understand the "what" and "why" of the feature, not necessarily the "how" (which the developer will figure out). Make sure to provide options in letter/number lists so I can respond easily with my selections.
-3.  **Generate PRD:** Based on the initial prompt and the user's answers to the clarifying questions, generate a PRD using the structure outlined below.
-4.  **Save PRD:** Save the generated document as `[n]-prd-[feature-name].md` inside the `/tasks` directory. (Where `n` is a zero-padded 4-digit sequence starting from 0001, e.g., `0001-prd-user-authentication.md`, `0002-prd-dashboard.md`, etc.)
+1.  **Receive Initial Prompt:** Brugeren giver en kort beskrivelse eller anmodning om en ny funktion eller funktionalitet.
+2.  **Ask Clarifying Questions:** Før AI’en skriver PRD’et, skal den stille opklarende spørgsmål for at indsamle tilstrækkelig information. Målet er at forstå "hvad" og "hvorfor" funktionen skal udvikles – ikke nødvendigvis "hvordan" (det klarer udvikleren). Sørg for at stille spørgsmål med nummererede eller bogstaverede svarmuligheder, så brugeren nemt kan vælge.
+3.  **Generate PRD:** Ud fra den oprindelige prompt og brugerens svar på de opklarende spørgsmål, skal AI’en generere et PRD med nedenstående struktur.
+4.  **Save PRD:** Gem dokumentet som [n]-prd-[funktionsnavn].md i mappen /tasks. (n er et nulutfyldt 4-cifret tal startende fra 0001, fx 0001-prd-bruger-login.md, 0002-prd-dashboard.md osv.)
 
 ## Clarifying Questions (Examples)
 
-The AI should adapt its questions based on the prompt, but here are some common areas to explore:
+AI’en skal tilpasse spørgsmålene efter konteksten, men her er typiske områder:
 
-*   **Problem/Goal:** "What problem does this feature solve for the user?" or "What is the main goal we want to achieve with this feature?"
-*   **Target User:** "Who is the primary user of this feature?"
-*   **Core Functionality:** "Can you describe the key actions a user should be able to perform with this feature?"
-*   **User Stories:** "Could you provide a few user stories? (e.g., As a [type of user], I want to [perform an action] so that [benefit].)"
-*   **Acceptance Criteria:** "How will we know when this feature is successfully implemented? What are the key success criteria?"
-*   **Scope/Boundaries:** "Are there any specific things this feature *should not* do (non-goals)?"
-*   **Data Requirements:** "What kind of data does this feature need to display or manipulate?"
-*   **Design/UI:** "Are there any existing design mockups or UI guidelines to follow?" or "Can you describe the desired look and feel?"
-*   **Edge Cases:** "Are there any potential edge cases or error conditions we should consider?"
+*   **Problem/Goal:** "Hvilket problem løser denne funktion for brugeren?" eller "Hvad er hovedmålet med denne funktion?"
+*   **Target User:** "Hvem er den primære bruger af denne funktion?"
+*   **Core Functionality:** "Hvilke nøglehandlinger skal brugeren kunne udføre?"
+*   **User Stories:** "Kan du give et par brugerhistorier? (fx Som [brugertype], vil jeg [handling], så jeg kan [fordel].)"
+*   **Acceptance Criteria:** "Hvordan ved vi, at funktionen er korrekt implementeret? Hvad er succeskriterierne?"
+*   **Scope/Boundaries:** "Er der noget, funktionen ikke skal kunne?"
+*   **Data Requirements:** "Hvilke data skal funktionen vise eller manipulere?"
+*   **Design/UI:** "Findes der eksisterende mockups eller UI-guidelines?" eller "Hvordan skal funktionen se ud og føles?"
+*   **Edge Cases:** "Er der nogen specielle situationer eller fejltilfælde, vi bør tage højde for?"
 
 ## PRD Structure
 
-The generated PRD should include the following sections:
+Det genererede PRD skal indeholde følgende afsnit:
 
-1.  **Introduction/Overview:** Briefly describe the feature and the problem it solves. State the goal.
-2.  **Goals:** List the specific, measurable objectives for this feature.
-3.  **User Stories:** Detail the user narratives describing feature usage and benefits.
-4.  **Functional Requirements:** List the specific functionalities the feature must have. Use clear, concise language (e.g., "The system must allow users to upload a profile picture."). Number these requirements.
-5.  **Non-Goals (Out of Scope):** Clearly state what this feature will *not* include to manage scope.
-6.  **Design Considerations (Optional):** Link to mockups, describe UI/UX requirements, or mention relevant components/styles if applicable.
-7.  **Technical Considerations (Optional):** Mention any known technical constraints, dependencies, or suggestions (e.g., "Should integrate with the existing Auth module").
-8.  **Success Metrics:** How will the success of this feature be measured? (e.g., "Increase user engagement by 10%", "Reduce support tickets related to X").
-9.  **Open Questions:** List any remaining questions or areas needing further clarification.
+1. **Introduktion/Overblik**: Kort beskrivelse af funktionen og problemet den løser. Beskriv målet.
+
+2. **Mål**: Liste over specifikke, målbare mål for funktionen.
+
+3. **Brugerhistorier**: Brugercentrerede scenarier, der beskriver hvordan funktionen anvendes og hvilken værdi den skaber.
+
+4. **Funktionelle Krav**: Liste over specifikke funktioner, funktionen skal indeholde. Brug klar og præcis formulering (fx "Systemet skal tillade brugeren at uploade et profilbillede."). Nummerér kravene.
+
+5. **Ikke-mål** (Uden for Omfang): Beskriv tydeligt, hvad denne funktion ikke skal inkludere for at afgrænse omfanget.
+
+6. **Designovervejelser** (Valgfrit): Link til mockups, beskriv UI/UX, eller nævn relevante komponenter/stilarter hvis relevant.
+
+7. **Tekniske Overvejelser** (Valgfrit): Nævn tekniske begrænsninger, afhængigheder eller forslag (fx "Skal integreres med eksisterende Auth-modul").
+
+8. **Succeskriterier**: Hvordan måler vi, at funktionen er en succes? (fx "Øg brugerengagement med 10%", "Reducer support-henvendelser om X").
+
+9. **Åbne Spørgsmål**: Liste over punkter, der stadig mangler afklaring.
 
 ## Target Audience
 
-Assume the primary reader of the PRD is a **junior developer**. Therefore, requirements should be explicit, unambiguous, and avoid jargon where possible. Provide enough detail for them to understand the feature's purpose and core logic.
+Antag at den primære læser af PRD’et er en juniorudvikler. Derfor skal kravene være eksplicitte, entydige og undgå teknisk jargon, hvor det er muligt. Sørg for, at der er nok detaljer til at forstå formålet og den grundlæggende logik i funktionen.
 
 ## Output
 
@@ -51,6 +59,6 @@ Assume the primary reader of the PRD is a **junior developer**. Therefore, requi
 
 ## Final instructions
 
-1. Do NOT start implementing the PRD
-2. Make sure to ask the user clarifying questions
-3. Take the user's answers to the clarifying questions and improve the PRD
+1. Start ikke implementeringen af PRD’et
+2. Stil altid opklarende spørgsmål først
+3. Stil altid opklarende spørgsmål først
